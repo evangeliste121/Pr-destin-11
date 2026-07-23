@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique — Pro'SP International Ministries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="light-line"></div>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">Pro'SP <span>International</span> Ministries</a>
+    <nav class="navlinks">
+      <a href="index.html">Accueil</a>
+      <a href="ressources.html">Ressources gratuites</a>
+      <a href="boutique.html" class="active">Boutique</a>
+      <a href="index.html#conferences">Conférences</a>
+      <a href="formations.html">Formations</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="navburger" aria-label="Menu" onclick="document.getElementById('mm').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="index.html">Accueil</a>
+    <a href="ressources.html">Ressources gratuites</a>
+    <a href="boutique.html">Boutique</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="formations.html">Formations</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap inner">
+    <div class="eyebrow">Boutique</div>
+    <h1>Des ressources pour nourrir votre marche</h1>
+    <p>Livres, formats numériques et éditions dédicacées de Prosper Ernest — pour approfondir seul, en groupe ou en église.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="filter-row">
+      <button class="filter-chip active" data-filter="all">Tout</button>
+      <button class="filter-chip" data-filter="livres">Livres</button>
+      <button class="filter-chip" data-filter="numerique">Numérique</button>
+      <button class="filter-chip" data-filter="audio">Audio</button>
+    </div>
+
+    <div class="product-grid" id="grid">
+
+      <div class="product-card" data-cat="livres" data-name="Prédestiné pour une destination finale — Broché" data-price="25">
+        <div class="product-visual">
+          <div class="book small">
+            <div class="book-spine-real"><span>PRÉDESTINÉ POUR UNE DESTINATION FINALE</span></div>
+            <img class="book-cover-img" src="couverture-livre.jpg" alt="Couverture du livre">
+            <div class="book-pages-edge"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Livre broché</div>
+          <h3>Prédestiné pour une destination finale</h3>
+          <p class="desc">L'édition papier originale — à garder, annoter et partager.</p>
+          <div class="product-footer">
+            <span class="product-price">25 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="livres" data-name="Prédestiné pour une destination finale — Édition dédicacée" data-price="32">
+        <div class="product-visual dark">
+          <div class="product-tag">Dédicacé</div>
+          <div class="book small">
+            <div class="book-spine-real"><span>PRÉDESTINÉ POUR UNE DESTINATION FINALE</span></div>
+            <img class="book-cover-img" src="couverture-livre.jpg" alt="Couverture du livre, édition dédicacée">
+            <div class="book-pages-edge"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Édition limitée</div>
+          <h3>Édition dédicacée par l'auteur</h3>
+          <p class="desc">Exemplaire signé à la main par Prosper Ernest, quantités limitées.</p>
+          <div class="product-footer">
+            <span class="product-price">32 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="numerique" data-name="Prédestiné pour une destination finale — eBook" data-price="14">
+        <div class="product-visual">
+          <div class="book small">
+            <div class="book-spine-real"><span>PRÉDESTINÉ POUR UNE DESTINATION FINALE</span></div>
+            <img class="book-cover-img" src="couverture-livre.jpg" alt="Couverture du livre, version eBook">
+            <div class="book-pages-edge"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Numérique</div>
+          <h3>Version eBook</h3>
+          <p class="desc">Format PDF et ePub, téléchargement immédiat après commande.</p>
+          <div class="product-footer">
+            <span class="product-price">14 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="audio" data-name="Prédestiné pour une destination finale — Livre audio" data-price="18">
+        <div class="product-visual dark">
+          <div class="product-tag">Nouveauté</div>
+          <div class="book small">
+            <div class="book-spine-real"><span>PRÉDESTINÉ POUR UNE DESTINATION FINALE</span></div>
+            <img class="book-cover-img" src="couverture-livre.jpg" alt="Couverture du livre, version audio">
+            <div class="book-pages-edge"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Audio</div>
+          <h3>Version audio narrée</h3>
+          <p class="desc">Le livre lu par Prosper Ernest lui-même — idéal pour écouter en route.</p>
+          <div class="product-footer">
+            <span class="product-price">18 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="numerique" data-name="Guide d'étude en groupe — PDF" data-price="9">
+        <div class="product-visual">
+          <div class="book small">
+            <div class="book-spine"></div>
+            <div class="book-face small">
+              <div class="kicker">Complément</div>
+              <h2>Guide d'étude</h2>
+              <div class="gold-title">En groupe</div>
+              <div class="auth">6 sessions</div>
+            </div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Numérique</div>
+          <h3>Guide d'étude en groupe</h3>
+          <p class="desc">Questions et clés de réflexion pour parcourir le livre en cellule ou en église.</p>
+          <div class="product-footer">
+            <span class="product-price">9 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="livres" data-name="Pack Découverte (broché + guide d'étude)" data-price="30">
+        <div class="product-visual dark">
+          <div class="product-tag">Pack</div>
+          <div class="book small">
+            <div class="book-spine alt"></div>
+            <div class="book-face small alt">
+              <div class="kicker">Pack découverte</div>
+              <h2>Livre + Guide</h2>
+              <div class="gold-title">d'étude</div>
+              <div class="auth">Économisez 4 €</div>
+            </div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Pack</div>
+          <h3>Pack Découverte</h3>
+          <p class="desc">Le livre broché accompagné du guide d'étude en groupe, au prix le plus avantageux.</p>
+          <div class="product-footer">
+            <span class="product-price">30 €</span>
+            <div class="icon-cart" onclick="addToCart(this)">＋</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Pro'SP International Ministries</div>
+        <div style="max-width:36ch;">Prosper Ernest — prospinternationale.com</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="ressources.html">Ressources gratuites</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="formations.html">Formations</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pro'SP International Ministries. Tous droits réservés.</span>
+      <span>Site conçu pour prospinternationale.com</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-bar" id="cartBar">
+  <div class="cart-info"><strong id="cartCount">0</strong> article(s) — <span id="cartTotal">0</span> €</div>
+  <button class="btn btn-gold" onclick="checkout()">Passer commande →</button>
+</div>
+
+<script>
+  let cart = [];
+  function addToCart(el){
+    const card = el.closest('.product-card');
+    const name = card.dataset.name;
+    const price = parseFloat(card.dataset.price);
+    cart.push({name, price});
+    updateBar();
+    el.textContent = '✓';
+    setTimeout(()=>{ el.textContent='＋'; }, 900);
+  }
+  function updateBar(){
+    const bar = document.getElementById('cartBar');
+    const count = cart.length;
+    const total = cart.reduce((s,i)=>s+i.price,0);
+    document.getElementById('cartCount').textContent = count;
+    document.getElementById('cartTotal').textContent = total.toFixed(0);
+    bar.classList.toggle('show', count>0);
+  }
+  function checkout(){
+    alert('Panier (démo) : ' + cart.map(i=>i.name).join(', ') + ' — Total : ' + cart.reduce((s,i)=>s+i.price,0).toFixed(0) + ' €\n\nConnectez un vrai système de paiement (Shopify, Stripe...) pour activer les commandes en ligne.');
+  }
+
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.product-card');
+  chips.forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      cards.forEach(card=>{
+        card.style.display = (f==='all' || card.dataset.cat===f) ? 'flex' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

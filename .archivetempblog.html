@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Pro'SP International Ministries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="light-line"></div>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">Pro'SP <span>International</span> Ministries</a>
+    <nav class="navlinks">
+      <a href="index.html">Accueil</a>
+      <a href="ressources.html">Ressources gratuites</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="index.html#conferences">Conférences</a>
+      <a href="formations.html">Formations</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="navburger" aria-label="Menu" onclick="document.getElementById('mm').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="index.html">Accueil</a>
+    <a href="ressources.html">Ressources gratuites</a>
+    <a href="boutique.html">Boutique</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="formations.html">Formations</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap inner">
+    <div class="eyebrow">Blog</div>
+    <h1>Le blog de Prosper Ernest</h1>
+    <p>Réflexions, enseignements et paroles d'encouragement pour votre marche de foi.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="blog-filter">
+      <button class="filter-chip active" data-filter="all">Tous</button>
+      <button class="filter-chip" data-filter="enseignement">Enseignement</button>
+      <button class="filter-chip" data-filter="prophetique">Prophétique</button>
+      <button class="filter-chip" data-filter="temoignage">Témoignage</button>
+    </div>
+
+    <div class="blog-grid" id="grid">
+
+      <div class="blog-card" data-cat="prophetique">
+        <div class="blog-tag">Prophétique</div>
+        <div class="blog-meta"><span>13 novembre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Grandir dans le discernement</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+      <div class="blog-card" data-cat="enseignement">
+        <div class="blog-tag">Enseignement</div>
+        <div class="blog-meta"><span>2 novembre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Les deux mondes : ce que la Bible en dit</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+      <div class="blog-card" data-cat="temoignage">
+        <div class="blog-tag">Témoignage</div>
+        <div class="blog-meta"><span>20 octobre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Une délivrance qui a tout changé</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+      <div class="blog-card" data-cat="enseignement">
+        <div class="blog-tag">Enseignement</div>
+        <div class="blog-meta"><span>8 octobre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Reconnaître sa véritable identité</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+      <div class="blog-card" data-cat="prophetique">
+        <div class="blog-tag">Prophétique</div>
+        <div class="blog-meta"><span>25 septembre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Entendre la voix de Dieu aujourd'hui</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+      <div class="blog-card" data-cat="enseignement">
+        <div class="blog-tag">Enseignement</div>
+        <div class="blog-meta"><span>10 septembre, 2026</span><span>· Prosper Ernest</span></div>
+        <h3>Trois clés pour tenir dans le combat</h3>
+        <a href="index.html#contact" class="btn btn-outline">Lire →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Pro'SP International Ministries</div>
+        <div style="max-width:36ch;">Prosper Ernest — prospinternationale.com</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="ressources.html">Ressources gratuites</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="formations.html">Formations</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pro'SP International Ministries. Tous droits réservés.</span>
+      <span>Site conçu pour prospinternationale.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.blog-card');
+  chips.forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.filter;
+      cards.forEach(card=>{
+        card.style.display = (f==='all' || card.dataset.cat===f) ? 'flex' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
